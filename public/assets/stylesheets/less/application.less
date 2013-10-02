@@ -1,0 +1,171 @@
+@import url(http://fonts.googleapis.com/css?family=Anonymous+Pro|Raleway:400,700);
+
+@brand: #a59ac9;
+@brand-dark: darken(@brand, 10%);
+@second: #EE3C7E;
+@second-dark: darken(@second, 10%);
+
+html, body, h1, h2, h3, h4, h5, h6, p {
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+}
+
+html, body {
+    height: 100%;
+    background: lighten(@brand, 20%);
+}
+
+a {
+    color: @second;
+
+    &:hover {
+        text-decoration: underline;
+        color: @second-dark;
+    }
+}
+
+#container {
+    position: relative;
+    min-height: 100%;
+}
+
+.contain-to-grid {
+    border-bottom: 1px solid @brand;
+    background: lighten(@brand, 20%);
+
+    .top-bar {
+        margin-bottom: 0;
+        // padding: 20px 0;
+        height: auto;
+        background: none;
+
+        .name h1 {
+            font-size: 1.4em;
+
+            a {
+                padding: 20px 0 17px;
+                border-bottom: 3px solid transparent;
+                font-weight: normal;
+                color: @brand-dark;
+
+                &:hover {
+                    border-bottom: 3px solid @brand;
+                    text-decoration: none;
+                }
+            }
+
+            strong {
+                margin-right: 10px;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+        }
+
+        .top-bar-section {
+            ul, a, li > a {
+                background: none;
+            }
+
+            a {
+                margin: 0 25px 0 25px;
+                padding: 20px 0 17px;
+                border-bottom: 3px solid transparent;
+                width: auto;
+                font-size: 1em;
+                font-weight: normal;
+                text-shadow: 0 1px 0 #fff;
+                color: @second;
+
+                &:hover {
+                    border-bottom: 3px solid @brand;
+                    text-decoration: none;
+                    color: @second-dark;
+                }
+            }
+        }
+    }
+}
+
+.bar {
+    margin-bottom: 20px;
+    border-top: 1px solid #fff;
+
+    div {
+        height: 20px;
+    }
+
+    .one   { background-color: darken(@brand, 3%); }
+    .two   { background-color: @brand; }
+    .three { background-color: lighten(@brand, 10%); }
+    .four  { background-color: lighten(@brand, 15%); }
+    .five  { background-color: lighten(@brand, 20%); }
+}
+
+.side-nav {
+    font-size: 1.2em;
+    // border-left: 8px solid @brand;
+
+    li {
+        list-style: none;
+
+        a {
+            padding: 2px 20px;
+            color: @brand-dark;
+        }
+    }
+
+    ul {
+        font-size: .9em;
+
+        a {
+            color: @second;
+        }
+    }
+}
+
+.button {
+    border: 0;
+    border-bottom: 6px solid @brand-dark;
+    font-weight: normal;
+    background: @brand;
+
+    &:hover {
+        text-decoration: none;
+        background: darken(@brand, 5%);
+    }
+}
+
+#site-content {
+    padding: 40px 0;
+    background: #eee;
+}
+
+.content {
+    h1 {
+        // padding: 20px 0;
+    }
+
+    h1, h2, h3 {
+        margin: 1em 0 .5em;
+        color: @brand;
+    }
+
+    h4, h5, h6 {
+        margin: 1em 0 .5em;
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+        margin-top: .2em;
+    }
+}
+
+#site-footer {
+    margin: 20px 0 0;
+    padding: 20px 0;
+
+    p {
+        font-size: .8em;
+    }
+}
