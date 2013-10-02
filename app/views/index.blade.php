@@ -5,7 +5,7 @@
 
     <p>Shopavel is an ecommerce platform for developers built on Laravel 4.</p>
 
-    <a class="button large" href="/docs">Documentation</a> <a class="button large" href="/demo">Demo</a>
+    <a class="button large" href="/tutorial">Tutorial</a> <a class="button large" href="/docs">Documentation</a>
 
     <h2>Releases</h2>
 

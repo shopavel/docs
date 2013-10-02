@@ -56,7 +56,9 @@ View::composer('layout-nav', function($view)
         'Core' => array(
             'url' => '/docs/core',
             'subnav' => array(
-                'Entity Containers' => '/docs/entity-containers'
+                'Collections'  => '/docs/collections',
+                'Nested Sets'  => '/docs/nested-sets',
+                'Transactions' => '/docs/transactions',
             )
         ),
     );
@@ -67,6 +69,11 @@ View::composer('layout-nav', function($view)
 Route::get('/', function()
 {
     return View::make('index');
+});
+
+Route::get('/tutorial', function()
+{
+    return View::make('tutorial');
 });
 
 Route::get('/docs', function()

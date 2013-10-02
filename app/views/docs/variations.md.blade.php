@@ -54,6 +54,10 @@ app('features')->attachToCategory($feature->id, $category->id);
 #### Getting the features attached to a category
 
 ```php
+// Off the category
+$features = $category->features;
+
+// Using the repository
 $features = app('features')->getByCategory($categoryId);
 ```
 
@@ -66,8 +70,10 @@ A variation can be made up of any number of features, for example you may have a
 #### Getting the variations on a product
 
 ```php
-$variations = $product->getVariations();
+// As a queryable object
+$variations = $product->variations();
 
+// Looping the property
 foreach ($product->variations as $variation)
 {
     foreach ($variation->features as $feature)
@@ -83,7 +89,7 @@ By default these methods will list all the variations, whether marked as availab
 #### Getting only available variations
 
 ```php
-foreach ($product->availableVariations as $variation)
+foreach ($product->getAvailableVariations() as $variation)
 {
     // ...
 }
