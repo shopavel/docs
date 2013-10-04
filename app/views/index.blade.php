@@ -27,6 +27,8 @@
                 <li>Added customers package</li>
                 <li>Added orders package</li>
             </ul>
+
+            <a href="/releases/alpha1">Further details</a>
         </dd>
     </dl>
 @stop

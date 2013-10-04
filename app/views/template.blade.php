@@ -41,7 +41,7 @@
 
         <footer id="site-footer">
             <div class="row">
-                <p>by <a href="http://www.gelatindesign.co.uk">gelatindesign</a></p>
+                <p>by <a href="http://www.gelatindesign.co.uk">lsjroberts</a></p>
             </div
         </footer>
 

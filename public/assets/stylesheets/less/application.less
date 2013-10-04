@@ -1,8 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Anonymous+Pro|Raleway:400,700);
 
-@brand: #a59ac9;
+@brand: #be78d9;
 @brand-dark: darken(@brand, 10%);
-@second: #EE3C7E;
+@second: #e31461;
 @second-dark: darken(@second, 10%);
 
 html, body, h1, h2, h3, h4, h5, h6, p {
@@ -12,7 +12,7 @@ html, body, h1, h2, h3, h4, h5, h6, p {
 
 html, body {
     height: 100%;
-    background: lighten(@brand, 20%);
+    background: lighten(@brand, 18%);
 }
 
 a {
@@ -31,7 +31,7 @@ a {
 
 .contain-to-grid {
     border-bottom: 1px solid @brand;
-    background: lighten(@brand, 20%);
+    background: lighten(@brand, 18%);
 
     .top-bar {
         margin-bottom: 0;
@@ -41,6 +41,7 @@ a {
 
         .name h1 {
             font-size: 1.4em;
+            text-shadow: 0 1px 0 #fff;
 
             a {
                 padding: 20px 0 17px;
@@ -87,8 +88,9 @@ a {
 }
 
 .bar {
-    margin-bottom: 20px;
+    padding-bottom: 20px;
     border-top: 1px solid #fff;
+    background: #eee;
 
     div {
         height: 20px;
@@ -96,9 +98,9 @@ a {
 
     .one   { background-color: darken(@brand, 3%); }
     .two   { background-color: @brand; }
-    .three { background-color: lighten(@brand, 10%); }
-    .four  { background-color: lighten(@brand, 15%); }
-    .five  { background-color: lighten(@brand, 20%); }
+    .three { background-color: lighten(@brand, 6%); }
+    .four  { background-color: lighten(@brand, 12%); }
+    .five  { background-color: lighten(@brand, 18%); }
 }
 
 .side-nav {
@@ -136,7 +138,7 @@ a {
 }
 
 #site-content {
-    padding: 40px 0;
+    padding: 20px 0 40px;
     background: #eee;
 }
 
@@ -147,7 +149,7 @@ a {
 
     h1, h2, h3 {
         margin: 1em 0 .5em;
-        color: @brand;
+        color: @brand-dark;
     }
 
     h4, h5, h6 {

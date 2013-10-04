@@ -11,7 +11,7 @@
 |
 */
 
-View::composer('layout-nav', function($view)
+View::composer('docs', function($view)
 {
     $sidenav = array(
         'Getting Started' => array(
@@ -56,9 +56,29 @@ View::composer('layout-nav', function($view)
         'Core' => array(
             'url' => '/docs/core',
             'subnav' => array(
-                'Collections'  => '/docs/collections',
+                'Collections / Containers'  => '/docs/collections',
                 'Nested Sets'  => '/docs/nested-sets',
                 'Transactions' => '/docs/transactions',
+            )
+        ),
+    );
+
+    $view->with('sidenav', $sidenav);
+});
+
+View::composer('releases', function($view)
+{
+    $sidenav = array(
+        'Current' => array(
+            'url' => '#',
+            'subnav' => array(
+                'alpha1' => '/releases/alpha1',
+            )
+        ),
+        'Future' => array(
+            'url' => '#',
+            'subnav' => array(
+                'alpha2' => '/releases/alpha2',
             )
         ),
     );
@@ -81,7 +101,7 @@ Route::get('/docs', function()
     return View::make('docs.getting-started');
 });
 
-Route::get('/docs/{slug}', function($slug)
+Route::get('/{parent}/{slug}', function($parent, $slug)
 {
-    return View::make('docs.' . $slug);
+    return View::make($parent . '.' . $slug);
 });
